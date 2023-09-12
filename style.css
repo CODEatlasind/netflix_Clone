@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --primary: #2a2a2a;
+    --secondary: #c40000;
+    --text: #ffffff;
+
+}
+/* @media (max-width: 1000px) {
+    .movie-list{
+        grid-auto-flow: column;
+    }
+} */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    
+    
+}
+body{
+    background-color: var(--primary);
+    color: var(--text);
+    font-family: 'Bebas Neue', sans-serif;
+    
+}
+header{
+    background-color: var(--primary);
+    text-decoration: none;
+    color: var(--text);
+    
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem ;
+}
+header nav {
+    text-decoration: none;
+}
+section{
+    padding: 7vh 0;
+    height: 96vh;
+    margin: 2vh 0;
+    min-height: fit-content;
+}
+
+.nav-img{
+    width: 10rem;
+    height: auto;
+}
+.heading{
+    padding: 0 2vw;
+    font-size: x-large;
+}
+
+/* movie-Container */
+.btn-scroll{
+    background-color: var(--text);
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    cursor:pointer;
+    box-shadow: 2px 1px 2px gray;
+}
+.scroll{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+}
+.movie-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(180px,2fr);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    z-index:0;
+    padding: 0 2vw;
+}
+.movie-box{
+    /* display: flex; */
+    height: auto;
+    position: relative;
+    top:80%;
+    transform: translate(0,-80%);    
+}
+.movie-list::-webkit-scrollbar{
+    display: none;
+}
+.movies{
+    aspect-ratio: 2/3;
+    height: 25rem;
+    width: auto;
+    border-radius: 5px;
+}
+
+.preview img{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -99;
+    filter: brightness(50%);
+}
+.preview-name{
+    position: relative;
+    top: 25vh;
+    transform: translateY(-50%);
+    z-index: 20;
+    font-size: xxx-large;
+    padding: 0 2vw;
+}
